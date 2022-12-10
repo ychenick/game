@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>scissors game</title>
+<body>
+Please type your choise in the next field:<br>
+<input type="text" id = "userinput"><br>
+bot choice is <span id = "bot_choise_word"></span><br>
+Game result is <span id = "result"></span><br>
+<button onclick = "play()">play!!!!!</button>
+
+
+
+</body>
+<script>
+function play(){
+user_choice=document.getElementById("userinput").value
+console.log(user_choice);
+bot_choice = Math.floor((Math.random() * 4) + 1);
+if (bot_choice === 1) {
+bot_choise_word = "stone";
+}
+if (bot_choice === 2) {
+bot_choise_word = "scissors";
+}
+if (bot_choice === 3) {
+bot_choise_word = "paper";
+}
+console.log(bot_choise_word);
+if (user_choice === "stone" && bot_choise_word === "stone") {
+result = "draw";
+}
+if (user_choice === "scissors" && bot_choise_word === "stone") {
+result = "bot won";
+}
+if (user_choice === "paper" && bot_choise_word === "stone") {
+result = "gamer won";
+}
+if (user_choice === "stone" && bot_choise_word === "scissors") {
+result = "gamer won";
+}
+if (user_choice === "scissors" && bot_choise_word === "scissors") {
+result = "draw";
+}
+if (user_choice === "paper" && bot_choise_word === "scissors") {
+result = "bot won";
+}
+if (user_choice === "stone" && bot_choise_word === "paper") {
+result = "bot won";
+}
+if (user_choice === "scissors" && bot_choise_word === "paper") {
+result = "gamer won";
+}
+if (user_choice === "paper" && bot_choise_word === "paper") {
+result = "draw";
+}
+console.log(result);
+document.getElementById("bot_choise_word").innerHTML=bot_choise_word;
+document.getElementById("result").innerHTML=result;
+}
+</script>
+</html>
