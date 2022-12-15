@@ -1,0 +1,149 @@
+<html>
+<head>
+</head>
+<body>
+<span id="whosturnis">pc's turn</span><br>
+<span id="00" onclick="passturn('00')" style="margin-left:20px">-</span><span id="01" onclick="passturn('01')" style="margin-left:20px">-</span><span id="02" onclick="passturn('02')" style="margin-left:20px">-</span><br>
+<span id="10" onclick="passturn('10')" style="margin-left:20px">-</span><span id="11" onclick="passturn('11')" style="margin-left:20px">-</span><span id="12" onclick="passturn('12')" style="margin-left:20px">-</span><br>
+<span id="20" onclick="passturn('20')" style="margin-left:20px">-</span><span id="21" onclick="passturn('21')" style="margin-left:20px">-</span><span id="22" onclick="passturn('22')" style="margin-left:20px">-</span><br>
+
+<button onclick="passturn()">End turn</button>
+</body>
+<script>
+turn = "pc's turn";
+cell00=2;
+cell01=2;
+cell02=2;
+cell10=2;
+cell11=2;
+cell12=2;
+cell20=2;
+cell21=2;
+cell22=2;
+function updateui(){
+  document.getElementById("whosturnis").innerHTML = turn;
+  if (cell00===2){
+    document.getElementById("00").innerHTML = "-";
+  }
+  if (cell00===1){
+    document.getElementById("00").innerHTML = "X";
+  }
+  if (cell00===0){
+    document.getElementById("00").innerHTML = "O";
+  }
+  if (cell01===2){
+    document.getElementById("01").innerHTML = "-";
+  }
+  if (cell01===1){
+    document.getElementById("01").innerHTML = "X";
+  }
+  if (cell01===0){
+    document.getElementById("01").innerHTML = "O";
+  }
+  if (cell02===2){
+    document.getElementById("02").innerHTML = "-";
+  }
+  if (cell02===1){
+    document.getElementById("02").innerHTML = "X";
+  }
+  if (cell02===0){
+    document.getElementById("02").innerHTML = "O";
+  }
+  if (cell10===2){
+    document.getElementById("10").innerHTML = "-";
+  }
+  if (cell10===1){
+    document.getElementById("10").innerHTML = "X";
+  }
+  if (cell10===0){
+    document.getElementById("10").innerHTML = "O";
+  }
+  if (cell11===2){
+    document.getElementById("11").innerHTML = "-";
+  }
+  if (cell11===1){
+    document.getElementById("11").innerHTML = "X";
+  }
+  if (cell11===0){
+    document.getElementById("11").innerHTML = "O";
+  }
+  if (cell12===2){
+    document.getElementById("12").innerHTML = "-";
+  }
+  if (cell12===1){
+    document.getElementById("12").innerHTML = "X";
+  }
+  if (cell12===0){
+    document.getElementById("12").innerHTML = "O";
+  }
+  if (cell20===2){
+    document.getElementById("20").innerHTML = "-";
+  }
+  if (cell20===1){
+    document.getElementById("20").innerHTML = "X";
+  }
+  if (cell20===0){
+    document.getElementById("20").innerHTML = "O";
+  }
+  if (cell21===2){
+    document.getElementById("21").innerHTML = "-";
+  }
+  if (cell21===1){
+    document.getElementById("21").innerHTML = "X";
+  }
+  if (cell21===0){
+    document.getElementById("21").innerHTML = "O";
+  }
+  if (cell22===2){
+    document.getElementById("22").innerHTML = "-";
+  }
+  if (cell22===1){
+    document.getElementById("22").innerHTML = "X";
+  }
+  if (cell22===0){
+    document.getElementById("22").innerHTML = "O";
+  }
+}
+updateui();
+function passturn(source) {
+  if (turn==="pc's turn"){
+    cell11=1;
+    turn = "gamer's turn";
+    updateui();
+  } else {
+    if(source==="00"){
+	  cell00=0;
+	}
+	if (turn==="pc's turn"){
+    cell11=1;
+	if(source==="01"){
+	  cell01=0;
+	}
+	if(source==="02"){
+	  cell02=0;
+	}
+	if(source==="10"){
+	  cell10=0;
+	}
+	if(source==="11"){
+	  cell11=0;
+	}
+	if(source==="12"){
+	  cell12=0;
+	}
+	if(source==="20"){
+	  cell20=0;
+	}
+	if(source==="21"){
+	  cell21=0;
+	}
+	if(source==="22"){
+	  cell22=0;
+	}
+	turn = "pc's turn";
+    updateui();
+  }
+
+}
+</script>
+</html>
