@@ -111,11 +111,12 @@ function passturn(source) {
     turn = "gamer's turn";
     updateui();
   } else {
+  if (turn==="pc's turn"){
+    cell12=1;
     if(source==="00"){
 	  cell00=0;
 	}
 	if (turn==="pc's turn"){
-    cell11=1;
 	if(source==="01"){
 	  cell01=0;
 	}
