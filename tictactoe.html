@@ -20,8 +20,12 @@ cell12=2;
 cell20=2;
 cell21=2;
 cell22=2;
-function updateui(){
-  document.getElementById("whosturnis").innerHTML = turn;
+function updateui(uimod){
+  if (uimod==="end game") {
+  document.getElementById("whosturnis").innerHTML = result;
+   } else {
+   document.getElementById("whosturnis").innerHTML = turn;
+   }
   if (cell00===2){
     document.getElementById("00").innerHTML = "-";
   }
@@ -104,43 +108,163 @@ function updateui(){
     document.getElementById("22").innerHTML = "O";
   }
 }
-updateui();
+updateui("continue");
 function passturn(source) {
+
   if (turn==="pc's turn"){
-    cell11=1;
-    turn = "gamer's turn";
-    updateui();
+    pcturn();
   } else {
-    if(source==="00"){
-      cell00=0;
-    }
-    if(source==="01"){
-      cell01=0;
-    }
-    if(source==="02"){
-      cell02=0;
-    }
-    if(source==="10"){
-      cell10=0;
-    }
-    if(source==="11"){
-      cell11=0;
-    }
-    if(source==="12"){
-      cell12=0;
-    }
-    if(source==="20"){
-      cell20=0;
-    }
-    if(source==="21"){
-      cell21=0;
-    }
-    if(source==="22"){
-      cell22=0;
-    }
-    turn = "pc's turn";
-    updateui();
+    gamerturn(source);
   }
+  checkWinCondition();
+}
+function pcturn() {
+    if (cell11===2 && turn==="pc's turn"){
+      cell11=1;
+	  turn = "gamer's turn";
+	}
+	if (cell00===2 && turn==="pc's turn"){
+      cell00=1;
+	  turn = "gamer's turn";
+	}
+	if (cell01===2 && turn==="pc's turn"){
+      cell01=1;
+	  turn = "gamer's turn";
+	}
+	if (cell02===2 && turn==="pc's turn"){
+      cell02=1;
+	  turn = "gamer's turn";
+	}
+	if (cell10===2 && turn==="pc's turn"){
+      cell10=1;
+	  turn = "gamer's turn";
+	}
+	if (cell12===2 && turn==="pc's turn"){
+      cell12=1;
+	  turn = "gamer's turn";
+	}
+	if (cell20===2 && turn==="pc's turn"){
+      cell20=1;
+	  turn = "gamer's turn";
+	}
+	if (cell21===2 && turn==="pc's turn"){
+      cell21=1;
+	  turn = "gamer's turn";
+	}
+	if (cell22===2 && turn==="pc's turn"){
+      cell22=1;
+	  turn = "gamer's turn";
+	}
+    updateui("continue");
+}
+function gamerturn(source) {
+    if(source==="00" && turn==="gamer's turn"){
+      cell00=0;
+	  turn = "pc's turn";
+    }
+    if(source==="01" && turn==="gamer's turn"){
+      cell01=0;
+	  turn = "pc's turn";
+    }
+    if(source==="02" && turn==="gamer's turn"){
+      cell02=0;
+	  turn = "pc's turn";
+    }
+    if(source==="10" && turn==="gamer's turn"){
+      cell10=0;
+	  turn = "pc's turn";
+    }
+    if(source==="11" && turn==="gamer's turn"){
+      cell11=0;
+	  turn = "pc's turn";
+    }
+    if(source==="12" && turn==="gamer's turn"){
+      cell12=0;
+	  turn = "pc's turn";
+    }
+    if(source==="20" && turn==="gamer's turn"){
+      cell20=0;
+	  turn = "pc's turn";
+    }
+    if(source==="21" && turn==="gamer's turn"){
+      cell21=0;
+	  turn = "pc's turn";
+    }
+    if(source==="22" && turn==="gamer's turn"){
+      cell22=0;
+	  turn = "pc's turn";
+    }
+    updateui("continue");
+}
+function checkWinCondition() {
+    result="";
+	if (cell00===cell01 && cell01===cell02){
+      if (cell00===0) {
+        result = "gamer won";
+      }
+      if (cell00===1) {
+        result = "bot won";
+      }	  
+	}
+	if (cell10===cell11 && cell11===cell12){
+      if (cell10===0) {
+        result = "gamer won";
+      }
+      if (cell10===1) {
+        result = "bot won";
+      }	  
+	}
+	if (cell20===cell21 && cell21===cell22){
+      if (cell20===0) {
+        result = "gamer won";
+      }
+      if (cell20===1) {
+        result = "bot won";
+      }	  
+	}
+	if (cell00===cell10 && cell10===cell20){
+      if (cell00===0) {
+        result = "gamer won";
+      }
+      if (cell00===1) {
+        result = "bot won";
+      }	  
+	}
+	if (cell01===cell11 && cell11===cell21){
+      if (cell01===0) {
+        result = "gamer won";
+      }
+      if (cell01===1) {
+        result = "bot won";
+      }	  
+	}
+	if (cell02===cell12 && cell12===cell22){
+      if (cell02===0) {
+        result = "gamer won";
+      }
+      if (cell02===1) {
+        result = "bot won";
+      }	  
+	}
+    if (cell00===cell11 && cell11===cell22){
+      if (cell00===0) {
+        result = "gamer won";
+      }
+      if (cell00===1) {
+        result = "bot won";
+      }	  
+	}
+	if (cell02===cell11 && cell11===cell20){
+      if (cell02===0) {
+        result = "gamer won";
+      }
+      if (cell02===1) {
+        result = "bot won";
+      }	  
+	}
+    if (result==="gamer won" || result==="bot won") {
+	updateui("end game");
+    }
 }
 </script>
 </html>
