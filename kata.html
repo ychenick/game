@@ -11,70 +11,69 @@ console.log("it's pretty dumb, but well...\n");
 pocket_money = 500;
 emotions = ["cool!", "so-so", "bad"];
 days = ["Monday", "Tuesday", "Wednessday", "Thursday", "Friday", "Saturday", "Sunday"];
-for (var i=0;i<days.length;i++){
-    theday = days[i];
-    if (theday==="Monday"){
-        console.log("It is ", theday, "and you need to go to school");
-        pocket_money = pocket_money + 300; // your mom gave you that for school lunch
-        pocket_money = pocket_money - 210; // the actual price of the lunch
-    }
-	if (theday==="Tuesday"){
-        console.log("It is ", theday, "and you need to go to school");
-        pocket_money = pocket_money + 300; // your mom gave you that for school lunch
-        pocket_money = pocket_money - 210; // the actual price of the lunch
-    }
-	if (theday==="Wednessday"){
-        console.log("It is ", theday, "and you need to go to school");
-        pocket_money = pocket_money + 300; // your mom gave you that for school lunch
-        pocket_money = pocket_money - 210; // the actual price of the lunch
-    }
-	if (theday==="Thursday"){
-        console.log("It is ", theday, "and you need to go to school");
-        pocket_money = pocket_money + 300; // your mom gave you that for school lunch
-        pocket_money = pocket_money - 210; // the actual price of the lunch
-    }
-	if (theday==="Friday"){
-        console.log("It is ", theday, "and you need to go to school");
-        pocket_money = pocket_money + 300; // your mom gave you that for school lunch
-        pocket_money = pocket_money - 210; // the actual price of the lunch
-    }
-    if (theday==="Saturday"){
-        console.log("It is ", theday);
-        going_to_cinema = prompt("Would like you to go to a cinema?\nPlease, type yes or no\n")
-        if (going_to_cinema==="yes"){
-            pocket_money = pocket_money - 300;
-            your_emotion_number = randomFromRange(0, 3);
-            your_emotion = emotions[your_emotion_number];
-            console.log("you watched the movie, it was ", your_emotion);
+    for (var i=0;i<days.length;i++){
+        theday = days[i];
+        if (theday==="Monday"){
+            console.log("It is ", theday, "and you need to go to school");
+            pocket_money = pocket_money + 300; // your mom gave you that for school lunch
+            pocket_money = pocket_money - 210; // the actual price of the lunch
         }
-        if (going_to_cinema==="no"){
-            console.log("you spent whole saturday coding the games");
+        if (theday==="Tuesday"){
+            console.log("It is ", theday, "and you need to go to school");
+            pocket_money = pocket_money + 300; // your mom gave you that for school lunch
+            pocket_money = pocket_money - 210; // the actual price of the lunch
         }
-        if (going_to_cinema!=="yes" && going_to_cinema!=="no"){
-            console.log("sorry, I didn't understand you!");
+        if (theday==="Wednessday"){
+            console.log("It is ", theday, "and you need to go to school");
+            pocket_money = pocket_money + 300; // your mom gave you that for school lunch
+            pocket_money = pocket_money - 210; // the actual price of the lunch
         }
-    }
-}
-
-    }
-    if (theday==="Sunday"){
-        console.log("It is ", theday);
-        going_to_park = prompt("Would you like to go to the park??\nPlease, type yes or no\n")
-        if (going_to_park==="yes"){
-            pocket_money = pocket_money - 150;
-            your_emotion_number = randomFromRange(0, 3);
-            your_emotion = emotions[your_emotion_number];
-            console.log("You were walking in the park, it was ", your_emotion);
+        if (theday==="Thursday"){
+            console.log("It is ", theday, "and you need to go to school");
+            pocket_money = pocket_money + 300; // your mom gave you that for school lunch
+            pocket_money = pocket_money - 210; // the actual price of the lunch
         }
-        if (going_to_park==="no"){
-            console.log("you spent whole sunday coding the games");
+        if (theday==="Friday"){
+            console.log("It is ", theday, "and you need to go to school");
+            pocket_money = pocket_money + 300; // your mom gave you that for school lunch
+            pocket_money = pocket_money - 210; // the actual price of the lunch
         }
-        if (going_to_park!=="yes" && going_to_park!=="no"){
-            console.log("sorry, I didn't understand you!");
+        if (theday==="Saturday"){
+            console.log("It is ", theday);
+            going_to_cinema = prompt("Would like you to go to a cinema?\nPlease, type yes or no\n")
+            if (going_to_cinema==="yes"){
+                pocket_money = pocket_money - 300;
+                your_emotion_number = randomFromRange(0, 3);
+                your_emotion = emotions[your_emotion_number];
+                console.log("you watched the movie, it was ", your_emotion);
+            }
+            if (going_to_cinema==="no"){
+                console.log("you spent whole saturday coding the games");
+            }
+            if (going_to_cinema!=="yes" && going_to_cinema!=="no"){
+                console.log("sorry, I didn't understand you!");
+            }
+        }
+        if (theday==="Sunday"){
+            console.log("It is ", theday);
+            going_to_park = prompt("Would you like to go to the park??\nPlease, type yes or no\n")
+            if (going_to_park==="yes"){
+                pocket_money = pocket_money - 150;
+                your_emotion_number = randomFromRange(0, 3);
+                your_emotion = emotions[your_emotion_number];
+                console.log("You were walking in the park, it was ", your_emotion);
+            }
+            if (going_to_park==="no"){
+                console.log("you spent whole sunday coding the games");
+            }
+            if (going_to_park!=="yes" && going_to_park!=="no"){
+                console.log("sorry, I didn't understand you!");
+            }
         }
     }
 console.log("you survived the week!");
 console.log("you have this amount of money", pocket_money);
+}
 
 play();
 

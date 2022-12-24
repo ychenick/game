@@ -6,23 +6,23 @@ emotions = ["cool!", "so-so", "bad"]
 days = ["Monday", "Tuesday", "Wednessday", "Thursday", "Friday", "Saturday", "Sunday"]
 for theday in days:
     if theday=="Monday":
-        print("It is ", theday, "and you need to go to school");
+        print("It is ", theday, "and you need to go to school")
         pocket_money = pocket_money + 300 # your mom gave you that for school lunch
         pocket_money = pocket_money - 210 # the actual price of the lunch
     if theday=="Tuesday":
-        print("It is ", theday, "and you need to go to school");
+        print("It is ", theday, "and you need to go to school")
         pocket_money = pocket_money + 300 # your mom gave you that for school lunch
         pocket_money = pocket_money - 210 # the actual price of the lunch
     if theday=="Wednessday":
-        print("It is ", theday, "and you need to go to school");
+        print("It is ", theday, "and you need to go to school")
         pocket_money = pocket_money + 300 # your mom gave you that for school lunch
         pocket_money = pocket_money - 210 # the actual price of the lunch
     if theday=="Thursday":
-        print("It is ", theday, "and you need to go to school");
+        print("It is ", theday, "and you need to go to school")
         pocket_money = pocket_money + 300 # your mom gave you that for school lunch
         pocket_money = pocket_money - 210 # the actual price of the lunch
     if theday=="Friday":
-        print("It is ", theday, "and you need to go to school");
+        print("It is ", theday, "and you need to go to school")
         pocket_money = pocket_money + 300 # your mom gave you that for school lunch
         pocket_money = pocket_money - 210 # the actual price of the lunch
     if theday=="Saturday":
