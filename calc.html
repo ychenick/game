@@ -11,8 +11,8 @@
     <h1>Andrew's First Calculator:</h1>
     <br />
     <input id="value1" type="text" /><br />
-    <button id="buttonplus" onclick="(this.id)">+</button>
-    <button id="buttonminus" onclick="(this.id)">-</button>
+    <button id="buttonplus" onclick="setupArifmeticAction(this.id)">+</button>
+    <button id="buttonminus" onclick="setupArifmeticAction(this.id)">-</button>
     <button>:</button>
     <button>*</button><br />
     <input id="value2" type="text" /><br />
@@ -22,23 +22,27 @@
     <script>
 	userchoice = "";
 	c = 0;
-      function calc() {
+    function calc() {
         a = parseFloat(document.getElementById("value1").value);
         console.log(a);
 		b = parseFloat(document.getElementById("value2").value);
         console.log(b);
 		if (userchoice === "plus") {
 		  c=a+b;
+		  console.log(c);
 		}
-		console.log(c);
-      }
-	  function setupArifmeticAction(buttonId) {
+    }
+    function setupArifmeticAction(buttonId) {
+		console.log("we are here 1");
         if (buttonId==="buttonplus"){
+	      console.log("we are here 2");
 	      userchoice = "plus"
 	    }
 	    if (buttonId==="buttonminus"){
 	      userchoice = "minus"
 	    }
+	    //userchoice = "multiply"
+	    //userchoice = "div"
 	  }
     </script> 
   </body>
