@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+
+  <body>
+    <h1>Andrew's First Calculator:</h1>
+    <br />
+    <input id="value1" type="text" /><br />
+    <button id="buttonplus" onclick="(this.id)">+</button>
+    <button id="buttonminus" onclick="(this.id)">-</button>
+    <button>:</button>
+    <button>*</button><br />
+    <input id="value2" type="text" /><br />
+    <button onclick="calc()">=</button><br />
+    <input id="result" type="text" /><br /><br />
+    <span id="testOutput"></span>
+    <script>
+	userchoice = "";
+	c = 0;
+      function calc() {
+        a = parseFloat(document.getElementById("value1").value);
+        console.log(a);
+		b = parseFloat(document.getElementById("value2").value);
+        console.log(b);
+		if (userchoice === "plus") {
+		  c=a+b;
+		}
+		console.log(c);
+      }
+	  function setupArifmeticAction(buttonId) {
+        if (buttonId==="buttonplus"){
+	      userchoice = "plus"
+	    }
+	    if (buttonId==="buttonminus"){
+	      userchoice = "minus"
+	    }
+	  }
+    </script> 
+  </body>
+</html>
