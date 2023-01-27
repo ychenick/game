@@ -6,22 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Static Template</title>
   </head>
-
   <body>
     <h1>Andrew's First Calculator:</h1>
     <br />
     <input id="value1" type="text" /><br />
     <button id="buttonplus" onclick="setupArifmeticAction(this.id)">+</button>
     <button id="buttonminus" onclick="setupArifmeticAction(this.id)">-</button>
-    <button>:</button>
-    <button>*</button><br />
+	<button id="buttonmultiplication" onclick="setupArifmeticAction(this.id)">*</button>
+    <button id="buttondivide" onclick="setupArifmeticAction(this.id)">:</button>
     <input id="value2" type="text" /><br />
     <button onclick="calc()">=</button><br />
     <input id="result" type="text" /><br /><br />
     <span id="testOutput"></span>
     <script>
 	userchoice = "";
-	c = 0;
+	c = (this.id);
     function calc() {
         a = parseFloat(document.getElementById("value1").value);
         console.log(a);
@@ -30,8 +29,20 @@
 		if (userchoice === "plus") {
 		  c=a+b;
 		  console.log(c);
+		   }
+		if (userchoice === "minus") {
+		  c=a-b;
+		  console.log(c);
+		   }
+	    if (userchoice === "multiplication") {
+		  c=a*b;
+		  console.log(c);
+		   }
+		if (userchoice === "multiplication") {
+		  c=a/b;
+		  console.log(c);
+		   }
 		}
-    }
     function setupArifmeticAction(buttonId) {
 		console.log("we are here 1");
         if (buttonId==="buttonplus"){
@@ -41,8 +52,12 @@
 	    if (buttonId==="buttonminus"){
 	      userchoice = "minus"
 	    }
-	    //userchoice = "multiply"
-	    //userchoice = "div"
+		if (buttonId==="buttonmultiplication"){
+	      userchoice = "multiplication"
+	    }
+		if (buttonId==="buttondivide"){
+	      userchoice = "divide"
+	    }
 	  }
     </script> 
   </body>
