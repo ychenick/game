@@ -3,10 +3,10 @@
 </head>
 <body>
 <span id="whosturnis">pc's turn</span><br>
-<span id="00"style="margin-left:20px">-</span><span id="01"style="margin-left:20px">-</span><span id="02"style="margin-left:20px">-</span><span id="03"style="margin-left:20px">-</span><span id="04"style="margin-left:20px">-</span><span id="05"style="margin-left:20px">-</span><span id="06"style="margin-left:20px">-</span><span id="07"style="margin-left:20px">-</span><span id="08"style="margin-left:20px">-</span><span id="09"style="margin-left:20px">-</span>
-<span id="10"style="margin-left:20px">-</span><span id="11"style="margin-left:20px">-</span><span id="12"style="margin-left:20px">-</span><span id="13"style="margin-left:20px">-</span><span id="14"style="margin-left:20px">-</span><span id="15"style="margin-left:20px">-</span><span id="16"style="margin-left:20px">-</span><span id="17"style="margin-left:20px">-</span><span id="18"style="margin-left:20px">-</span><span id="19"style="margin-left:20px">-</span>
-<span id="20"style="margin-left:20px">-</span><span id="21"style="margin-left:20px">-</span><span id="22"style="margin-left:20px">-</span><span id="23"style="margin-left:20px">-</span><span id="24"style="margin-left:20px">-</span><span id="25"style="margin-left:20px">-</span><span id="26"style="margin-left:20px">-</span><span id="27"style="margin-left:20px">-</span><span id="28"style="margin-left:20px">-</span><span id="29"style="margin-left:20px">-</span>
-<span id="30"style="margin-left:20px">-</span><span id="31"style="margin-left:20px">-</span><span id="32"style="margin-left:20px">-</span><span id="33"style="margin-left:20px">-</span><span id="34"style="margin-left:20px">-</span><span id="35"style="margin-left:20px">-</span><span id="36"style="margin-left:20px">-</span><span id="37"style="margin-left:20px">-</span><span id="38"style="margin-left:20px">-</span><span id="39"style="margin-left:20px">-</span>
+<span id="00" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="01"style="margin-left:20px">-</span><span id="02"style="margin-left:20px">-</span><span id="03"style="margin-left:20px">-</span><span id="04"style="margin-left:20px">-</span><span id="05"style="margin-left:20px">-</span><span id="06"style="margin-left:20px">-</span><span id="07"style="margin-left:20px">-</span><span id="08"style="margin-left:20px">-</span><span id="09"style="margin-left:20px">-</span><br>
+<span id="10" onclick="fieldclick(this)" style="margin-left:20px">-</span><span id="11"style="margin-left:20px">-</span><span id="12"style="margin-left:20px">-</span><span id="13"style="margin-left:20px">-</span><span id="14"style="margin-left:20px">-</span><span id="15"style="margin-left:20px">-</span><span id="16"style="margin-left:20px">-</span><span id="17"style="margin-left:20px">-</span><span id="18"style="margin-left:20px">-</span><span id="19"style="margin-left:20px">-</span><br>
+<span id="20" onclick="fieldclick(this)" style="margin-left:20px">-</span><span id="21"style="margin-left:20px">-</span><span id="22"style="margin-left:20px">-</span><span id="23"style="margin-left:20px">-</span><span id="24"style="margin-left:20px">-</span><span id="25"style="margin-left:20px">-</span><span id="26"style="margin-left:20px">-</span><span id="27"style="margin-left:20px">-</span><span id="28"style="margin-left:20px">-</span><span id="29"style="margin-left:20px">-</span><br>
+<span id="30" onclick="fieldclick(this)" style="margin-left:20px">-</span><span id="31"style="margin-left:20px">-</span><span id="32"style="margin-left:20px">-</span><span id="33"style="margin-left:20px">-</span><span id="34"style="margin-left:20px">-</span><span id="35"style="margin-left:20px">-</span><span id="36"style="margin-left:20px">-</span><span id="37"style="margin-left:20px">-</span><span id="38"style="margin-left:20px">-</span><span id="39"style="margin-left:20px">-</span><br>
 <button onclick="passturn()">End turn</button>
 </body>
 <script>
@@ -20,5 +20,8 @@ cell12=2;
 cell20=2;
 cell21=2;
 cell22=2;
+function fieldclick(obj) {
+	console.log(obj);
+}
 </script>
 </html>
