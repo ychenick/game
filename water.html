@@ -2,26 +2,295 @@
 <head>
 </head>
 <body>
-<span id="whosturnis">pc's turn</span><br>
-<span id="00" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="01"style="margin-left:20px">-</span><span id="02"style="margin-left:20px">-</span><span id="03"style="margin-left:20px">-</span><span id="04"style="margin-left:20px">-</span><span id="05"style="margin-left:20px">-</span><span id="06"style="margin-left:20px">-</span><span id="07"style="margin-left:20px">-</span><span id="08"style="margin-left:20px">-</span><span id="09"style="margin-left:20px">-</span><br>
-<span id="10" onclick="fieldclick(this)" style="margin-left:20px">-</span><span id="11"style="margin-left:20px">-</span><span id="12"style="margin-left:20px">-</span><span id="13"style="margin-left:20px">-</span><span id="14"style="margin-left:20px">-</span><span id="15"style="margin-left:20px">-</span><span id="16"style="margin-left:20px">-</span><span id="17"style="margin-left:20px">-</span><span id="18"style="margin-left:20px">-</span><span id="19"style="margin-left:20px">-</span><br>
-<span id="20" onclick="fieldclick(this)" style="margin-left:20px">-</span><span id="21"style="margin-left:20px">-</span><span id="22"style="margin-left:20px">-</span><span id="23"style="margin-left:20px">-</span><span id="24"style="margin-left:20px">-</span><span id="25"style="margin-left:20px">-</span><span id="26"style="margin-left:20px">-</span><span id="27"style="margin-left:20px">-</span><span id="28"style="margin-left:20px">-</span><span id="29"style="margin-left:20px">-</span><br>
-<span id="30" onclick="fieldclick(this)" style="margin-left:20px">-</span><span id="31"style="margin-left:20px">-</span><span id="32"style="margin-left:20px">-</span><span id="33"style="margin-left:20px">-</span><span id="34"style="margin-left:20px">-</span><span id="35"style="margin-left:20px">-</span><span id="36"style="margin-left:20px">-</span><span id="37"style="margin-left:20px">-</span><span id="38"style="margin-left:20px">-</span><span id="39"style="margin-left:20px">-</span><br>
+<span id="whosturnis">player1</span><br>
+<span id="00" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="01" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="02" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="03" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="04" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="05" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="06" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="07" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="08" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="09" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><br>
+<span id="10" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="11" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="12" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="13" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="14" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="15" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="16" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="17" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="18" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="19" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><br>
+<span id="20" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="21" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="22" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="23" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="24" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="25" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="26" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="27" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="28" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="29" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><br>
+<span id="30" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="31" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="32" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="33" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="34" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="35" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="36" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="37" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="38" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="39" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><br>
+<span id="40" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="41" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="42" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="43" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="44" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="45" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="46" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="47" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="48" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="49" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><br>
+<span id="50" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="51" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="52" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="53" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="54" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="55" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="56" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="57" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="58" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="59" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><br>
+<span id="60" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="61" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="62" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="63" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="64" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="65" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="66" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="67" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="68" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="69" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><br>
+<span id="70" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="71" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="72" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="73" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="74" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="75" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="76" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="77" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="78" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="79" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><br>
+<span id="80" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="81" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="82" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="83" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="84" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="85" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="86" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="87" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="88" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="89" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><br>
+<span id="90" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="91" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="92" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="93" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="94" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="95" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="96" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="97" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="98" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="99" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><br>
 <button onclick="passturn()">End turn</button>
 </body>
 <script>
-turn = "pc's turn";
-cell00=2;
-cell01=2;
-cell02=2;
-cell10=2;
-cell11=2;
-cell12=2;
-cell20=2;
-cell21=2;
-cell22=2;
-function fieldclick(obj) {
-	console.log(obj);
+turn = "player1";
+player1deck=20;
+player1myfleet = [];
+for (i=0;i<10;i++) {
+    player1myfleet.push([]);
+}
+for (i = 0; i < 10; i++) {
+  for (j = 0; j < 10; j++) {
+      //for now, all map is just green grass
+      player1myfleet[i][j] = 0; //Math.floor(Math.random()*10);
+  }
+}
+player2deck=20;
+player2myfleet = [];
+for (i=0;i<10;i++) {
+    player2myfleet.push([]);
+}
+for (i = 0; i < 10; i++) {
+  for (j = 0; j < 10; j++) {
+      //for now, all map is just green grass
+      player2myfleet[i][j] = 0; //Math.floor(Math.random()*10);
+  }
+}
+function fieldclick(id) {
+  i=id[0];
+  j=id[1];
+  console.log(i,j);
+  if  (turn === "player1") {
+    if (player1deck > 0) {
+      player1myfleet[i][j]=1;
+      player1deck = player1deck - 1;
+      updateui();	
+    }
+  }
+  if  (turn === "player2") {
+    if (player2deck > 0) {
+      player2myfleet[i][j]=1;
+      player2deck = player2deck - 1;
+      updateui();	
+    }
+  }
+}
+function passturn() {
+  if (turn==="player1") {
+    turn="player2";
+  } else {
+    turn="player1";
+  }
+  updateui();
+}
+function updateui() {
+  if (turn === "player1") {
+    document.getElementById("whosturnis").innerHTML = turn;
+    document.getElementById("00").innerHTML = player1myfleet[0][0];
+	document.getElementById("01").innerHTML = player1myfleet[0][1];
+	document.getElementById("02").innerHTML = player1myfleet[0][2];
+	document.getElementById("03").innerHTML = player1myfleet[0][3];
+	document.getElementById("04").innerHTML = player1myfleet[0][4];
+	document.getElementById("05").innerHTML = player1myfleet[0][5];
+	document.getElementById("06").innerHTML = player1myfleet[0][6];
+	document.getElementById("07").innerHTML = player1myfleet[0][7];
+	document.getElementById("08").innerHTML = player1myfleet[0][8];
+	document.getElementById("09").innerHTML = player1myfleet[0][9];
+	
+	document.getElementById("10").innerHTML = player1myfleet[1][0];
+	document.getElementById("11").innerHTML = player1myfleet[1][1];
+	document.getElementById("12").innerHTML = player1myfleet[1][2];
+	document.getElementById("13").innerHTML = player1myfleet[1][3];
+	document.getElementById("14").innerHTML = player1myfleet[1][4];
+	document.getElementById("15").innerHTML = player1myfleet[1][5];
+	document.getElementById("16").innerHTML = player1myfleet[1][6];
+	document.getElementById("17").innerHTML = player1myfleet[1][7];
+	document.getElementById("18").innerHTML = player1myfleet[1][8];
+	document.getElementById("19").innerHTML = player1myfleet[1][9];
+	
+	document.getElementById("20").innerHTML = player1myfleet[2][0];
+	document.getElementById("21").innerHTML = player1myfleet[2][1];
+	document.getElementById("22").innerHTML = player1myfleet[2][2];
+	document.getElementById("23").innerHTML = player1myfleet[2][3];
+	document.getElementById("24").innerHTML = player1myfleet[2][4];
+	document.getElementById("25").innerHTML = player1myfleet[2][5];
+	document.getElementById("26").innerHTML = player1myfleet[2][6];
+	document.getElementById("27").innerHTML = player1myfleet[2][7];
+	document.getElementById("28").innerHTML = player1myfleet[2][8];
+	document.getElementById("29").innerHTML = player1myfleet[2][9];
+	
+	document.getElementById("30").innerHTML = player1myfleet[3][0];
+	document.getElementById("31").innerHTML = player1myfleet[3][1];
+	document.getElementById("32").innerHTML = player1myfleet[3][2];
+	document.getElementById("33").innerHTML = player1myfleet[3][3];
+	document.getElementById("34").innerHTML = player1myfleet[3][4];
+	document.getElementById("35").innerHTML = player1myfleet[3][5];
+	document.getElementById("36").innerHTML = player1myfleet[3][6];
+	document.getElementById("37").innerHTML = player1myfleet[3][7];
+	document.getElementById("38").innerHTML = player1myfleet[3][8];
+	document.getElementById("39").innerHTML = player1myfleet[3][9];
+	
+	document.getElementById("40").innerHTML = player1myfleet[4][0];
+	document.getElementById("41").innerHTML = player1myfleet[4][1];
+	document.getElementById("42").innerHTML = player1myfleet[4][2];
+	document.getElementById("43").innerHTML = player1myfleet[4][3];
+	document.getElementById("44").innerHTML = player1myfleet[4][4];
+	document.getElementById("45").innerHTML = player1myfleet[4][5];
+	document.getElementById("46").innerHTML = player1myfleet[4][6];
+	document.getElementById("47").innerHTML = player1myfleet[4][7];
+	document.getElementById("48").innerHTML = player1myfleet[4][8];
+	document.getElementById("49").innerHTML = player1myfleet[4][9];
+	
+	document.getElementById("50").innerHTML = player1myfleet[5][0];
+	document.getElementById("51").innerHTML = player1myfleet[5][1];
+	document.getElementById("52").innerHTML = player1myfleet[5][2];
+	document.getElementById("53").innerHTML = player1myfleet[5][3];
+	document.getElementById("54").innerHTML = player1myfleet[5][4];
+	document.getElementById("55").innerHTML = player1myfleet[5][5];
+	document.getElementById("56").innerHTML = player1myfleet[5][6];
+	document.getElementById("57").innerHTML = player1myfleet[5][7];
+	document.getElementById("58").innerHTML = player1myfleet[5][8];
+	document.getElementById("59").innerHTML = player1myfleet[5][9];
+	
+	document.getElementById("60").innerHTML = player1myfleet[6][0];
+	document.getElementById("61").innerHTML = player1myfleet[6][1];
+	document.getElementById("62").innerHTML = player1myfleet[6][2];
+	document.getElementById("63").innerHTML = player1myfleet[6][3];
+	document.getElementById("64").innerHTML = player1myfleet[6][4];
+	document.getElementById("65").innerHTML = player1myfleet[6][5];
+	document.getElementById("66").innerHTML = player1myfleet[6][6];
+	document.getElementById("67").innerHTML = player1myfleet[6][7];
+	document.getElementById("68").innerHTML = player1myfleet[6][8];
+	document.getElementById("69").innerHTML = player1myfleet[6][9];
+	
+	document.getElementById("70").innerHTML = player1myfleet[7][0];
+	document.getElementById("71").innerHTML = player1myfleet[7][1];
+	document.getElementById("72").innerHTML = player1myfleet[7][2];
+	document.getElementById("73").innerHTML = player1myfleet[7][3];
+	document.getElementById("74").innerHTML = player1myfleet[7][4];
+	document.getElementById("75").innerHTML = player1myfleet[7][5];
+	document.getElementById("76").innerHTML = player1myfleet[7][6];
+	document.getElementById("77").innerHTML = player1myfleet[7][7];
+	document.getElementById("78").innerHTML = player1myfleet[7][8];
+	document.getElementById("79").innerHTML = player1myfleet[7][9];
+	
+	document.getElementById("80").innerHTML = player1myfleet[8][0];
+	document.getElementById("81").innerHTML = player1myfleet[8][1];
+	document.getElementById("82").innerHTML = player1myfleet[8][2];
+	document.getElementById("83").innerHTML = player1myfleet[8][3];
+	document.getElementById("84").innerHTML = player1myfleet[8][4];
+	document.getElementById("85").innerHTML = player1myfleet[8][5];
+	document.getElementById("86").innerHTML = player1myfleet[8][6];
+	document.getElementById("87").innerHTML = player1myfleet[8][7];
+	document.getElementById("88").innerHTML = player1myfleet[8][8];
+	document.getElementById("89").innerHTML = player1myfleet[8][9];
+	
+	document.getElementById("90").innerHTML = player1myfleet[9][0];
+	document.getElementById("91").innerHTML = player1myfleet[9][1];
+	document.getElementById("92").innerHTML = player1myfleet[9][2];
+	document.getElementById("93").innerHTML = player1myfleet[9][3];
+	document.getElementById("94").innerHTML = player1myfleet[9][4];
+	document.getElementById("95").innerHTML = player1myfleet[9][5];
+	document.getElementById("96").innerHTML = player1myfleet[9][6];
+	document.getElementById("97").innerHTML = player1myfleet[9][7];
+	document.getElementById("98").innerHTML = player1myfleet[9][8];
+	document.getElementById("99").innerHTML = player1myfleet[9][9];
+  }
+  if (turn === "player2") {
+    document.getElementById("whosturnis").innerHTML = turn;
+    document.getElementById("00").innerHTML = player2myfleet[0][0];
+	document.getElementById("01").innerHTML = player2myfleet[0][1];
+	document.getElementById("02").innerHTML = player2myfleet[0][2];
+	document.getElementById("03").innerHTML = player2myfleet[0][3];
+	document.getElementById("04").innerHTML = player2myfleet[0][4];
+	document.getElementById("05").innerHTML = player2myfleet[0][5];
+	document.getElementById("06").innerHTML = player2myfleet[0][6];
+	document.getElementById("07").innerHTML = player2myfleet[0][7];
+	document.getElementById("08").innerHTML = player2myfleet[0][8];
+	document.getElementById("09").innerHTML = player2myfleet[0][9];
+	
+	document.getElementById("10").innerHTML = player2myfleet[1][0];
+	document.getElementById("11").innerHTML = player2myfleet[1][1];
+	document.getElementById("12").innerHTML = player2myfleet[1][2];
+	document.getElementById("13").innerHTML = player2myfleet[1][3];
+	document.getElementById("14").innerHTML = player2myfleet[1][4];
+	document.getElementById("15").innerHTML = player2myfleet[1][5];
+	document.getElementById("16").innerHTML = player2myfleet[1][6];
+	document.getElementById("17").innerHTML = player2myfleet[1][7];
+	document.getElementById("18").innerHTML = player2myfleet[1][8];
+	document.getElementById("19").innerHTML = player2myfleet[1][9];
+	
+	document.getElementById("20").innerHTML = player2myfleet[2][0];
+	document.getElementById("21").innerHTML = player2myfleet[2][1];
+	document.getElementById("22").innerHTML = player2myfleet[2][2];
+	document.getElementById("23").innerHTML = player2myfleet[2][3];
+	document.getElementById("24").innerHTML = player2myfleet[2][4];
+	document.getElementById("25").innerHTML = player2myfleet[2][5];
+	document.getElementById("26").innerHTML = player2myfleet[2][6];
+	document.getElementById("27").innerHTML = player2myfleet[2][7];
+	document.getElementById("28").innerHTML = player2myfleet[2][8];
+	document.getElementById("29").innerHTML = player2myfleet[2][9];
+	
+	document.getElementById("30").innerHTML = player2myfleet[3][0];
+	document.getElementById("31").innerHTML = player2myfleet[3][1];
+	document.getElementById("32").innerHTML = player2myfleet[3][2];
+	document.getElementById("33").innerHTML = player2myfleet[3][3];
+	document.getElementById("34").innerHTML = player2myfleet[3][4];
+	document.getElementById("35").innerHTML = player2myfleet[3][5];
+	document.getElementById("36").innerHTML = player2myfleet[3][6];
+	document.getElementById("37").innerHTML = player2myfleet[3][7];
+	document.getElementById("38").innerHTML = player2myfleet[3][8];
+	document.getElementById("39").innerHTML = player2myfleet[3][9];
+	
+	document.getElementById("40").innerHTML = player2myfleet[4][0];
+	document.getElementById("41").innerHTML = player2myfleet[4][1];
+	document.getElementById("42").innerHTML = player2myfleet[4][2];
+	document.getElementById("43").innerHTML = player2myfleet[4][3];
+	document.getElementById("44").innerHTML = player2myfleet[4][4];
+	document.getElementById("45").innerHTML = player2myfleet[4][5];
+	document.getElementById("46").innerHTML = player2myfleet[4][6];
+	document.getElementById("47").innerHTML = player2myfleet[4][7];
+	document.getElementById("48").innerHTML = player2myfleet[4][8];
+	document.getElementById("49").innerHTML = player2myfleet[4][9];
+	
+	document.getElementById("50").innerHTML = player2myfleet[5][0];
+	document.getElementById("51").innerHTML = player2myfleet[5][1];
+	document.getElementById("52").innerHTML = player2myfleet[5][2];
+	document.getElementById("53").innerHTML = player2myfleet[5][3];
+	document.getElementById("54").innerHTML = player2myfleet[5][4];
+	document.getElementById("55").innerHTML = player2myfleet[5][5];
+	document.getElementById("56").innerHTML = player2myfleet[5][6];
+	document.getElementById("57").innerHTML = player2myfleet[5][7];
+	document.getElementById("58").innerHTML = player2myfleet[5][8];
+	document.getElementById("59").innerHTML = player2myfleet[5][9];
+	
+	document.getElementById("60").innerHTML = player2myfleet[6][0];
+	document.getElementById("61").innerHTML = player2myfleet[6][1];
+	document.getElementById("62").innerHTML = player2myfleet[6][2];
+	document.getElementById("63").innerHTML = player2myfleet[6][3];
+	document.getElementById("64").innerHTML = player2myfleet[6][4];
+	document.getElementById("65").innerHTML = player2myfleet[6][5];
+	document.getElementById("66").innerHTML = player2myfleet[6][6];
+	document.getElementById("67").innerHTML = player2myfleet[6][7];
+	document.getElementById("68").innerHTML = player2myfleet[6][8];
+	document.getElementById("69").innerHTML = player2myfleet[6][9];
+	
+	document.getElementById("70").innerHTML = player2myfleet[7][0];
+	document.getElementById("71").innerHTML = player2myfleet[7][1];
+	document.getElementById("72").innerHTML = player2myfleet[7][2];
+	document.getElementById("73").innerHTML = player2myfleet[7][3];
+	document.getElementById("74").innerHTML = player2myfleet[7][4];
+	document.getElementById("75").innerHTML = player2myfleet[7][5];
+	document.getElementById("76").innerHTML = player2myfleet[7][6];
+	document.getElementById("77").innerHTML = player2myfleet[7][7];
+	document.getElementById("78").innerHTML = player2myfleet[7][8];
+	document.getElementById("79").innerHTML = player2myfleet[7][9];
+	
+	document.getElementById("80").innerHTML = player2myfleet[8][0];
+	document.getElementById("81").innerHTML = player2myfleet[8][1];
+	document.getElementById("82").innerHTML = player2myfleet[8][2];
+	document.getElementById("83").innerHTML = player2myfleet[8][3];
+	document.getElementById("84").innerHTML = player2myfleet[8][4];
+	document.getElementById("85").innerHTML = player2myfleet[8][5];
+	document.getElementById("86").innerHTML = player2myfleet[8][6];
+	document.getElementById("87").innerHTML = player2myfleet[8][7];
+	document.getElementById("88").innerHTML = player2myfleet[8][8];
+	document.getElementById("89").innerHTML = player2myfleet[8][9];
+	
+	document.getElementById("90").innerHTML = player2myfleet[9][0];
+	document.getElementById("91").innerHTML = player2myfleet[9][1];
+	document.getElementById("92").innerHTML = player2myfleet[9][2];
+	document.getElementById("93").innerHTML = player2myfleet[9][3];
+	document.getElementById("94").innerHTML = player2myfleet[9][4];
+	document.getElementById("95").innerHTML = player2myfleet[9][5];
+	document.getElementById("96").innerHTML = player2myfleet[9][6];
+	document.getElementById("97").innerHTML = player2myfleet[9][7];
+	document.getElementById("98").innerHTML = player2myfleet[9][8];
+	document.getElementById("99").innerHTML = player2myfleet[9][9];
+  }
 }
 </script>
 </html>
