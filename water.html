@@ -17,6 +17,8 @@
 </body>
 <script>
 turn = "player1";
+phasegame = "setup";
+shots = 1;
 player1deck=20;
 player1myfleet = [];
 for (i=0;i<10;i++) {
@@ -26,6 +28,16 @@ for (i = 0; i < 10; i++) {
   for (j = 0; j < 10; j++) {
       //for now, all map is just green grass
       player1myfleet[i][j] = 0; //Math.floor(Math.random()*10);
+  }
+}
+player1fieldfire = [];
+for (i=0;i<10;i++) {
+    player1fieldfire.push([]);
+}
+for (i = 0; i < 10; i++) {
+  for (j = 0; j < 10; j++) {
+      //for now, all map is just green grass
+      player1fieldfire[i][j] = 0; //Math.floor(Math.random()*10);
   }
 }
 player2deck=20;
@@ -39,23 +51,59 @@ for (i = 0; i < 10; i++) {
       player2myfleet[i][j] = 0; //Math.floor(Math.random()*10);
   }
 }
+player2fieldfire = [];
+for (i=0;i<10;i++) {
+    player2fieldfire.push([]);
+}
+for (i = 0; i < 10; i++) {
+  for (j = 0; j < 10; j++) {
+      //for now, all map is just green grass
+      player2fieldfire[i][j] = 0; //Math.floor(Math.random()*10);
+  }
+}
 function fieldclick(id) {
   i=id[0];
   j=id[1];
   console.log(i,j);
-  if  (turn === "player1") {
-    if (player1deck > 0) {
-      player1myfleet[i][j]=1;
-      player1deck = player1deck - 1;
-      updateui();	
+  if (phasegame === "setup") {
+    if  (turn === "player1") {
+      if (player1deck > 0) {
+        player1myfleet[i][j]=1;
+        player1deck = player1deck - 1;
+        updateui();	
+      }
+    }
+    if  (turn === "player2") {
+      if (player2deck > 0) {
+        player2myfleet[i][j]=1;
+        player2deck = player2deck - 1;
+        updateui();	
+      }
     }
   }
-  if  (turn === "player2") {
-    if (player2deck > 0) {
-      player2myfleet[i][j]=1;
-      player2deck = player2deck - 1;
-      updateui();	
-    }
+  if (phasegame === "fire") {
+    if  (turn === "player1") {
+	  if (shots>0) {
+	    shots=shots-1;
+	    if (player2myfleet[i][j] === 1) {
+	      player1fieldfire[i][j] = "X";
+		  shots=shots+1;
+	    } else {
+	      player1fieldfire[i][j] = "-";
+	    }
+      }
+	}
+	if  (turn === "player2") {
+	  if (shots>0) {
+	    shots=shots-1
+	    if (player1myfleet[i][j] === 1) {
+	      player2fieldfire[i][j] = "X";
+		  shots=shots+1
+	    } else {
+	      player2fieldfire[i][j] = "-";
+	    }
+	  }
+	}
   }
 }
 function passturn() {
@@ -64,6 +112,7 @@ function passturn() {
   } else {
     turn="player1";
   }
+  shots=1;
   updateui();
 }
 function updateui() {
