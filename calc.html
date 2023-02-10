@@ -15,6 +15,10 @@
 	<button id="buttonmultiplication" onclick="setupArifmeticAction(this.id)">*</button>
     <button id="buttondivide" onclick="setupArifmeticAction(this.id)">:</button>
 	<button id="buttondegree" onclick="setupArifmeticAction(this.id)">a^b</button>
+    <button id="buttonmr" onclick="setupArifmeticAction(this.id)">MR</button>
+	<button id="buttonmc" onclick="setupArifmeticAction(this.id)">MC</button>
+	<button id="buttonmplus" onclick="setupArifmeticAction(this.id)">M+</button>
+	<button id="buttonmminus" onclick="setupArifmeticAction(this.id)">M-</button>
     <input id="value2" type="text" /><br />
     <button onclick="calc()">=</button><br />
     <input id="result" type="text" /><br /><br />
@@ -22,6 +26,9 @@
     <script>
 	userchoice = "";
 	c = (this.id);
+	M=0;
+	A=3;
+	B=0;
     function calc() {
         a = parseFloat(document.getElementById("value1").value);
         console.log(a);
@@ -53,6 +60,22 @@
 		  document.getElementById("result").value = c;
 		   }
 		}
+    function mplus() {
+	  M=M+A;
+	  document.getElementById("result").value = c;
+	}
+	function mr() {
+	  B=M;
+	  return B
+	}
+	function mminus() {
+	  M=M-A;
+      document.getElementById("result").value = c;	 
+	}
+	function mc() {
+	  M=0;
+      document.getElementById("result").value = c;	 
+	}
     function setupArifmeticAction(buttonId) {
 		console.log("we are here 1");
         if (buttonId==="buttonplus"){
@@ -70,6 +93,18 @@
 	    }
 		if (buttonId==="buttondegree"){
 	      userchoice = "degree"
+	    }
+		if (buttonId==="buttonmr"){
+	      userchoice = "mc"
+	    }
+		if (buttonId==="buttonmc"){
+	      userchoice = "mc"
+	    }
+		if (buttonId==="buttonmminus"){
+	      userchoice = "mminus"
+	    }
+		if (buttonId==="buttonmplus"){
+	      userchoice = "mplus"
 	    }
 	  }
     </script> 
