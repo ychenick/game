@@ -14,6 +14,7 @@
     <button id="buttonminus" onclick="setupArifmeticAction(this.id)">-</button>
 	<button id="buttonmultiplication" onclick="setupArifmeticAction(this.id)">*</button>
     <button id="buttondivide" onclick="setupArifmeticAction(this.id)">:</button>
+	<button id="buttondegree" onclick="setupArifmeticAction(this.id)">a^b</button>
     <input id="value2" type="text" /><br />
     <button onclick="calc()">=</button><br />
     <input id="result" type="text" /><br /><br />
@@ -29,18 +30,27 @@
 		if (userchoice === "plus") {
 		  c=a+b;
 		  console.log(c);
+		  document.getElementById("result").value = c;
 		   }
 		if (userchoice === "minus") {
 		  c=a-b;
 		  console.log(c);
+		  document.getElementById("result").value = c;
 		   }
 	    if (userchoice === "multiplication") {
 		  c=a*b;
 		  console.log(c);
+		  document.getElementById("result").value = c;
 		   }
 		if (userchoice === "divide") {
 		  c=a/b;
 		  console.log(c);
+		  document.getElementById("result").value = c;
+		   }
+		if (userchoice === "degree") {
+		  c=a**b;
+		  console.log(c);
+		  document.getElementById("result").value = c;
 		   }
 		}
     function setupArifmeticAction(buttonId) {
@@ -57,6 +67,9 @@
 	    }
 		if (buttonId==="buttondivide"){
 	      userchoice = "divide"
+	    }
+		if (buttonId==="buttondegree"){
+	      userchoice = "degree"
 	    }
 	  }
     </script> 
