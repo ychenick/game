@@ -19,7 +19,10 @@
 turn = "player1";
 phasegame = "setup";
 shots = 1;
-player1deck=20;
+deckamount=3;
+player1deck=deckamount;
+player1finishsetup=false;
+player2finishsetup=false;
 player1myfleet = [];
 for (i=0;i<10;i++) {
     player1myfleet.push([]);
@@ -40,7 +43,7 @@ for (i = 0; i < 10; i++) {
       player1fieldfire[i][j] = 0; //Math.floor(Math.random()*10);
   }
 }
-player2deck=20;
+player2deck=deckamount;
 player2myfleet = [];
 for (i=0;i<10;i++) {
     player2myfleet.push([]);
@@ -110,14 +113,19 @@ function passturn() {
   if (turn==="player1") {
     turn="player2";
   } else {
+    player2finishsetup=true;
+  if (player2finishsetup === true) {
+   phasegame="fire";
+  }
     turn="player1";
   }
   shots=1;
   updateui();
 }
 function updateui() {
-  if (turn === "player1") {
-    document.getElementById("whosturnis").innerHTML = turn;
+  if (phasegame === "setup") {
+    if (turn === "player1") {
+      document.getElementById("whosturnis").innerHTML = turn;
     document.getElementById("00").innerHTML = player1myfleet[0][0];
 	document.getElementById("01").innerHTML = player1myfleet[0][1];
 	document.getElementById("02").innerHTML = player1myfleet[0][2];
@@ -226,10 +234,10 @@ function updateui() {
 	document.getElementById("96").innerHTML = player1myfleet[9][6];
 	document.getElementById("97").innerHTML = player1myfleet[9][7];
 	document.getElementById("98").innerHTML = player1myfleet[9][8];
-	document.getElementById("99").innerHTML = player1myfleet[9][9];
-  }
-  if (turn === "player2") {
-    document.getElementById("whosturnis").innerHTML = turn;
+	  document.getElementById("99").innerHTML = player1myfleet[9][9];
+    }
+    if (turn === "player2") {
+      document.getElementById("whosturnis").innerHTML = turn;
     document.getElementById("00").innerHTML = player2myfleet[0][0];
 	document.getElementById("01").innerHTML = player2myfleet[0][1];
 	document.getElementById("02").innerHTML = player2myfleet[0][2];
@@ -339,6 +347,233 @@ function updateui() {
 	document.getElementById("97").innerHTML = player2myfleet[9][7];
 	document.getElementById("98").innerHTML = player2myfleet[9][8];
 	document.getElementById("99").innerHTML = player2myfleet[9][9];
+    }
+  }
+  if (phasegame === "fire") {
+    if (turn === "player1") {
+      document.getElementById("whosturnis").innerHTML = turn;
+    document.getElementById("00").innerHTML = player1fieldfire[0][0];
+	document.getElementById("01").innerHTML = player1fieldfire[0][1];
+	document.getElementById("02").innerHTML = player1fieldfire[0][2];
+	document.getElementById("03").innerHTML = player1fieldfire[0][3];
+	document.getElementById("04").innerHTML = player1fieldfire[0][4];
+	document.getElementById("05").innerHTML = player1fieldfire[0][5];
+	document.getElementById("06").innerHTML = player1fieldfire[0][6];
+	document.getElementById("07").innerHTML = player1fieldfire[0][7];
+	document.getElementById("08").innerHTML = player1fieldfire[0][8];
+	document.getElementById("09").innerHTML = player1fieldfire[0][9];
+	
+	document.getElementById("10").innerHTML = player1fieldfire[1][0];
+	document.getElementById("11").innerHTML = player1fieldfire[1][1];
+	document.getElementById("12").innerHTML = player1fieldfire[1][2];
+	document.getElementById("13").innerHTML = player1fieldfire[1][3];
+	document.getElementById("14").innerHTML = player1fieldfire[1][4];
+	document.getElementById("15").innerHTML = player1fieldfire[1][5];
+	document.getElementById("16").innerHTML = player1fieldfire[1][6];
+	document.getElementById("17").innerHTML = player1fieldfire[1][7];
+	document.getElementById("18").innerHTML = player1fieldfire[1][8];
+	document.getElementById("19").innerHTML = player1fieldfire[1][9];
+	
+	document.getElementById("20").innerHTML = player1fieldfire[2][0];
+	document.getElementById("21").innerHTML = player1fieldfire[2][1];
+	document.getElementById("22").innerHTML = player1fieldfire[2][2];
+	document.getElementById("23").innerHTML = player1fieldfire[2][3];
+	document.getElementById("24").innerHTML = player1fieldfire[2][4];
+	document.getElementById("25").innerHTML = player1fieldfire[2][5];
+	document.getElementById("26").innerHTML = player1fieldfire[2][6];
+	document.getElementById("27").innerHTML = player1fieldfire[2][7];
+	document.getElementById("28").innerHTML = player1fieldfire[2][8];
+	document.getElementById("29").innerHTML = player1fieldfire[2][9];
+	
+	document.getElementById("30").innerHTML = player1fieldfire[3][0];
+	document.getElementById("31").innerHTML = player1fieldfire[3][1];
+	document.getElementById("32").innerHTML = player1fieldfire[3][2];
+	document.getElementById("33").innerHTML = player1fieldfire[3][3];
+	document.getElementById("34").innerHTML = player1fieldfire[3][4];
+	document.getElementById("35").innerHTML = player1fieldfire[3][5];
+	document.getElementById("36").innerHTML = player1fieldfire[3][6];
+	document.getElementById("37").innerHTML = player1fieldfire[3][7];
+	document.getElementById("38").innerHTML = player1fieldfire[3][8];
+	document.getElementById("39").innerHTML = player1fieldfire[3][9];
+	
+	document.getElementById("40").innerHTML = player1fieldfire[4][0];
+	document.getElementById("41").innerHTML = player1fieldfire[4][1];
+	document.getElementById("42").innerHTML = player1fieldfire[4][2];
+	document.getElementById("43").innerHTML = player1fieldfire[4][3];
+	document.getElementById("44").innerHTML = player1fieldfire[4][4];
+	document.getElementById("45").innerHTML = player1fieldfire[4][5];
+	document.getElementById("46").innerHTML = player1fieldfire[4][6];
+	document.getElementById("47").innerHTML = player1fieldfire[4][7];
+	document.getElementById("48").innerHTML = player1fieldfire[4][8];
+	document.getElementById("49").innerHTML = player1fieldfire[4][9];
+	
+	document.getElementById("50").innerHTML = player1fieldfire[5][0];
+	document.getElementById("51").innerHTML = player1fieldfire[5][1];
+	document.getElementById("52").innerHTML = player1fieldfire[5][2];
+	document.getElementById("53").innerHTML = player1fieldfire[5][3];
+	document.getElementById("54").innerHTML = player1fieldfire[5][4];
+	document.getElementById("55").innerHTML = player1fieldfire[5][5];
+	document.getElementById("56").innerHTML = player1fieldfire[5][6];
+	document.getElementById("57").innerHTML = player1fieldfire[5][7];
+	document.getElementById("58").innerHTML = player1fieldfire[5][8];
+	document.getElementById("59").innerHTML = player1fieldfire[5][9];
+	
+	document.getElementById("60").innerHTML = player1fieldfire[6][0];
+	document.getElementById("61").innerHTML = player1fieldfire[6][1];
+	document.getElementById("62").innerHTML = player1fieldfire[6][2];
+	document.getElementById("63").innerHTML = player1fieldfire[6][3];
+	document.getElementById("64").innerHTML = player1fieldfire[6][4];
+	document.getElementById("65").innerHTML = player1fieldfire[6][5];
+	document.getElementById("66").innerHTML = player1fieldfire[6][6];
+	document.getElementById("67").innerHTML = player1fieldfire[6][7];
+	document.getElementById("68").innerHTML = player1fieldfire[6][8];
+	document.getElementById("69").innerHTML = player1fieldfire[6][9];
+	
+	document.getElementById("70").innerHTML = player1fieldfire[7][0];
+	document.getElementById("71").innerHTML = player1fieldfire[7][1];
+	document.getElementById("72").innerHTML = player1fieldfire[7][2];
+	document.getElementById("73").innerHTML = player1fieldfire[7][3];
+	document.getElementById("74").innerHTML = player1fieldfire[7][4];
+	document.getElementById("75").innerHTML = player1fieldfire[7][5];
+	document.getElementById("76").innerHTML = player1fieldfire[7][6];
+	document.getElementById("77").innerHTML = player1fieldfire[7][7];
+	document.getElementById("78").innerHTML = player1fieldfire[7][8];
+	document.getElementById("79").innerHTML = player1fieldfire[7][9];
+	
+	document.getElementById("80").innerHTML = player1fieldfire[8][0];
+	document.getElementById("81").innerHTML = player1fieldfire[8][1];
+	document.getElementById("82").innerHTML = player1fieldfire[8][2];
+	document.getElementById("83").innerHTML = player1fieldfire[8][3];
+	document.getElementById("84").innerHTML = player1fieldfire[8][4];
+	document.getElementById("85").innerHTML = player1fieldfire[8][5];
+	document.getElementById("86").innerHTML = player1fieldfire[8][6];
+	document.getElementById("87").innerHTML = player1fieldfire[8][7];
+	document.getElementById("88").innerHTML = player1fieldfire[8][8];
+	document.getElementById("89").innerHTML = player1fieldfire[8][9];
+	
+	document.getElementById("90").innerHTML = player1fieldfire[9][0];
+	document.getElementById("91").innerHTML = player1fieldfire[9][1];
+	document.getElementById("92").innerHTML = player1fieldfire[9][2];
+	document.getElementById("93").innerHTML = player1fieldfire[9][3];
+	document.getElementById("94").innerHTML = player1fieldfire[9][4];
+	document.getElementById("95").innerHTML = player1fieldfire[9][5];
+	document.getElementById("96").innerHTML = player1fieldfire[9][6];
+	document.getElementById("97").innerHTML = player1fieldfire[9][7];
+	document.getElementById("98").innerHTML = player1fieldfire[9][8];
+	  document.getElementById("99").innerHTML = player1fieldfire[9][9];
+    }
+    if (turn === "player2") {
+      document.getElementById("whosturnis").innerHTML = turn;
+    document.getElementById("00").innerHTML = player2fieldfire[0][0];
+	document.getElementById("01").innerHTML = player2fieldfire[0][1];
+	document.getElementById("02").innerHTML = player2fieldfire[0][2];
+	document.getElementById("03").innerHTML = player2fieldfire[0][3];
+	document.getElementById("04").innerHTML = player2fieldfire[0][4];
+	document.getElementById("05").innerHTML = player2fieldfire[0][5];
+	document.getElementById("06").innerHTML = player2fieldfire[0][6];
+	document.getElementById("07").innerHTML = player2fieldfire[0][7];
+	document.getElementById("08").innerHTML = player2fieldfire[0][8];
+	document.getElementById("09").innerHTML = player2fieldfire[0][9];
+	
+	document.getElementById("10").innerHTML = player2fieldfire[1][0];
+	document.getElementById("11").innerHTML = player2fieldfire[1][1];
+	document.getElementById("12").innerHTML = player2fieldfire[1][2];
+	document.getElementById("13").innerHTML = player2fieldfire[1][3];
+	document.getElementById("14").innerHTML = player2fieldfire[1][4];
+	document.getElementById("15").innerHTML = player2fieldfire[1][5];
+	document.getElementById("16").innerHTML = player2fieldfire[1][6];
+	document.getElementById("17").innerHTML = player2fieldfire[1][7];
+	document.getElementById("18").innerHTML = player2fieldfire[1][8];
+	document.getElementById("19").innerHTML = player2fieldfire[1][9];
+	
+	document.getElementById("20").innerHTML = player2fieldfire[2][0];
+	document.getElementById("21").innerHTML = player2fieldfire[2][1];
+	document.getElementById("22").innerHTML = player2fieldfire[2][2];
+	document.getElementById("23").innerHTML = player2fieldfire[2][3];
+	document.getElementById("24").innerHTML = player2fieldfire[2][4];
+	document.getElementById("25").innerHTML = player2fieldfire[2][5];
+	document.getElementById("26").innerHTML = player2fieldfire[2][6];
+	document.getElementById("27").innerHTML = player2fieldfire[2][7];
+	document.getElementById("28").innerHTML = player2fieldfire[2][8];
+	document.getElementById("29").innerHTML = player2fieldfire[2][9];
+	
+	document.getElementById("30").innerHTML = player2fieldfire[3][0];
+	document.getElementById("31").innerHTML = player2fieldfire[3][1];
+	document.getElementById("32").innerHTML = player2fieldfire[3][2];
+	document.getElementById("33").innerHTML = player2fieldfire[3][3];
+	document.getElementById("34").innerHTML = player2fieldfire[3][4];
+	document.getElementById("35").innerHTML = player2fieldfire[3][5];
+	document.getElementById("36").innerHTML = player2fieldfire[3][6];
+	document.getElementById("37").innerHTML = player2fieldfire[3][7];
+	document.getElementById("38").innerHTML = player2fieldfire[3][8];
+	document.getElementById("39").innerHTML = player2fieldfire[3][9];
+	
+	document.getElementById("40").innerHTML = player2fieldfire[4][0];
+	document.getElementById("41").innerHTML = player2fieldfire[4][1];
+	document.getElementById("42").innerHTML = player2fieldfire[4][2];
+	document.getElementById("43").innerHTML = player2fieldfire[4][3];
+	document.getElementById("44").innerHTML = player2fieldfire[4][4];
+	document.getElementById("45").innerHTML = player2fieldfire[4][5];
+	document.getElementById("46").innerHTML = player2fieldfire[4][6];
+	document.getElementById("47").innerHTML = player2fieldfire[4][7];
+	document.getElementById("48").innerHTML = player2fieldfire[4][8];
+	document.getElementById("49").innerHTML = player2fieldfire[4][9];
+	
+	document.getElementById("50").innerHTML = player2fieldfire[5][0];
+	document.getElementById("51").innerHTML = player2fieldfire[5][1];
+	document.getElementById("52").innerHTML = player2fieldfire[5][2];
+	document.getElementById("53").innerHTML = player2fieldfire[5][3];
+	document.getElementById("54").innerHTML = player2fieldfire[5][4];
+	document.getElementById("55").innerHTML = player2fieldfire[5][5];
+	document.getElementById("56").innerHTML = player2fieldfire[5][6];
+	document.getElementById("57").innerHTML = player2fieldfire[5][7];
+	document.getElementById("58").innerHTML = player2fieldfire[5][8];
+	document.getElementById("59").innerHTML = player2fieldfire[5][9];
+	
+	document.getElementById("60").innerHTML = player2fieldfire[6][0];
+	document.getElementById("61").innerHTML = player2fieldfire[6][1];
+	document.getElementById("62").innerHTML = player2fieldfire[6][2];
+	document.getElementById("63").innerHTML = player2fieldfire[6][3];
+	document.getElementById("64").innerHTML = player2fieldfire[6][4];
+	document.getElementById("65").innerHTML = player2fieldfire[6][5];
+	document.getElementById("66").innerHTML = player2fieldfire[6][6];
+	document.getElementById("67").innerHTML = player2fieldfire[6][7];
+	document.getElementById("68").innerHTML = player2fieldfire[6][8];
+	document.getElementById("69").innerHTML = player2fieldfire[6][9];
+	
+	document.getElementById("70").innerHTML = player2fieldfire[7][0];
+	document.getElementById("71").innerHTML = player2fieldfire[7][1];
+	document.getElementById("72").innerHTML = player2fieldfire[7][2];
+	document.getElementById("73").innerHTML = player2fieldfire[7][3];
+	document.getElementById("74").innerHTML = player2fieldfire[7][4];
+	document.getElementById("75").innerHTML = player2fieldfire[7][5];
+	document.getElementById("76").innerHTML = player2fieldfire[7][6];
+	document.getElementById("77").innerHTML = player2fieldfire[7][7];
+	document.getElementById("78").innerHTML = player2fieldfire[7][8];
+	document.getElementById("79").innerHTML = player2fieldfire[7][9];
+	
+	document.getElementById("80").innerHTML = player2fieldfire[8][0];
+	document.getElementById("81").innerHTML = player2fieldfire[8][1];
+	document.getElementById("82").innerHTML = player2fieldfire[8][2];
+	document.getElementById("83").innerHTML = player2fieldfire[8][3];
+	document.getElementById("84").innerHTML = player2fieldfire[8][4];
+	document.getElementById("85").innerHTML = player2fieldfire[8][5];
+	document.getElementById("86").innerHTML = player2fieldfire[8][6];
+	document.getElementById("87").innerHTML = player2fieldfire[8][7];
+	document.getElementById("88").innerHTML = player2fieldfire[8][8];
+	document.getElementById("89").innerHTML = player2fieldfire[8][9];
+	
+	document.getElementById("90").innerHTML = player2fieldfire[9][0];
+	document.getElementById("91").innerHTML = player2fieldfire[9][1];
+	document.getElementById("92").innerHTML = player2fieldfire[9][2];
+	document.getElementById("93").innerHTML = player2fieldfire[9][3];
+	document.getElementById("94").innerHTML = player2fieldfire[9][4];
+	document.getElementById("95").innerHTML = player2fieldfire[9][5];
+	document.getElementById("96").innerHTML = player2fieldfire[9][6];
+	document.getElementById("97").innerHTML = player2fieldfire[9][7];
+	document.getElementById("98").innerHTML = player2fieldfire[9][8];
+	document.getElementById("99").innerHTML = player2fieldfire[9][9];
+    }
   }
 }
 </script>
