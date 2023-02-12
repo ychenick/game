@@ -2,7 +2,9 @@
 <head>
 </head>
 <body>
-<span id="whosturnis">player1</span><br>
+<span id="whosturnis">player X</span><br>
+<span id="phasegame">phasegame</span><br>
+<span id="budget">budget</span><br>
 <span id="00" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="01" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="02" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="03" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="04" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="05" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="06" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="07" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="08" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="09" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><br>
 <span id="10" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="11" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="12" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="13" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="14" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="15" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="16" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="17" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="18" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="19" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><br>
 <span id="20" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="21" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="22" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="23" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="24" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="25" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="26" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="27" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="28" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="29" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><br>
@@ -13,16 +15,19 @@
 <span id="70" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="71" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="72" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="73" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="74" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="75" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="76" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="77" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="78" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="79" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><br>
 <span id="80" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="81" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="82" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="83" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="84" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="85" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="86" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="87" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="88" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="89" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><br>
 <span id="90" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="91" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="92" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="93" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="94" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="95" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="96" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="97" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="98" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><span id="99" onclick="fieldclick(this.id)" style="margin-left:20px">-</span><br>
-<button onclick="passturn()">End turn</button>
+<button id="end" onclick="passturn()">End turn</button>
 </body>
 <script>
 turn = "player1";
 phasegame = "setup";
 shots = 1;
 deckamount=3;
+player1sunkdeck=0;
+player2sunkdeck=0;
+onedeckcost=20000;
+player1money=deckamount*onedeckcost;
+player2money=deckamount*onedeckcost;
 player1deck=deckamount;
-player1finishsetup=false;
-player2finishsetup=false;
 player1myfleet = [];
 for (i=0;i<10;i++) {
     player1myfleet.push([]);
@@ -64,6 +69,7 @@ for (i = 0; i < 10; i++) {
       player2fieldfire[i][j] = 0; //Math.floor(Math.random()*10);
   }
 }
+updateui();
 function fieldclick(id) {
   i=id[0];
   j=id[1];
@@ -73,6 +79,7 @@ function fieldclick(id) {
       if (player1deck > 0) {
         player1myfleet[i][j]=1;
         player1deck = player1deck - 1;
+		player1money = player1money - onedeckcost;
         updateui();	
       }
     }
@@ -80,6 +87,7 @@ function fieldclick(id) {
       if (player2deck > 0) {
         player2myfleet[i][j]=1;
         player2deck = player2deck - 1;
+		player2money = player2money - onedeckcost;
         updateui();	
       }
     }
@@ -91,10 +99,16 @@ function fieldclick(id) {
 	    if (player2myfleet[i][j] === 1) {
 	      player1fieldfire[i][j] = "X";
 		  shots=shots+1;
+		  player1sunkdeck=player1sunkdeck+1;
+		  if (player1sunkdeck === deckamount) {
+		    alert("player1 has won");
+			document.getElementById("end").disabled = true;
+		  }
 	    } else {
 	      player1fieldfire[i][j] = "-";
 	    }
       }
+	  updateui();
 	}
 	if  (turn === "player2") {
 	  if (shots>0) {
@@ -102,30 +116,44 @@ function fieldclick(id) {
 	    if (player1myfleet[i][j] === 1) {
 	      player2fieldfire[i][j] = "X";
 		  shots=shots+1
+		  player2sunkdeck=player2sunkdeck+1;
+		  if (player2sunkdeck === deckamount) {
+		    alert("player2 has won");
+			document.getElementById("end").disabled = true;
+		  }
 	    } else {
 	      player2fieldfire[i][j] = "-";
 	    }
 	  }
+	  updateui();
 	}
   }
 }
 function passturn() {
-  if (turn==="player1") {
-    turn="player2";
+  if (phasegame === "setup") {
+    if (turn === "player1") {
+	  turn="player2";	  
+	} else {
+	  turn="player1";
+	  phasegame="fire";
+	  shots=1;
+	} 
   } else {
-    player2finishsetup=true;
-  if (player2finishsetup === true) {
-   phasegame="fire";
+    if (turn === "player1") {
+	  turn="player2";
+	} else {
+	  turn="player1";
+	}
+	shots=1;
   }
-    turn="player1";
-  }
-  shots=1;
-  updateui();
+  updateui();  
 }
 function updateui() {
+  document.getElementById("phasegame").innerHTML = phasegame;
   if (phasegame === "setup") {
     if (turn === "player1") {
       document.getElementById("whosturnis").innerHTML = turn;
+	  document.getElementById("budget").innerHTML = player1money;
     document.getElementById("00").innerHTML = player1myfleet[0][0];
 	document.getElementById("01").innerHTML = player1myfleet[0][1];
 	document.getElementById("02").innerHTML = player1myfleet[0][2];
@@ -238,6 +266,7 @@ function updateui() {
     }
     if (turn === "player2") {
       document.getElementById("whosturnis").innerHTML = turn;
+	  document.getElementById("budget").innerHTML = player2money;
     document.getElementById("00").innerHTML = player2myfleet[0][0];
 	document.getElementById("01").innerHTML = player2myfleet[0][1];
 	document.getElementById("02").innerHTML = player2myfleet[0][2];
